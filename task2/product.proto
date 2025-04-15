@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package product;
+
+service ServiceA {
+  rpc RequestData(RequestA) returns (ResponseA);
+}
+
+service ServiceB {
+  rpc RequestData(RequestB) returns (ResponseB);
+}
+
+message RequestA {
+  string query = 1;
+}
+
+message ResponseA {
+  string result = 1;
+}
+
+message RequestB {
+  string query = 1;
+}
+
+message ResponseB {
+  string result = 1;
+}
